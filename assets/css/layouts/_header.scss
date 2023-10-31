@@ -1,0 +1,29 @@
+.header-area{
+    &.fixed{
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .carts{
+        i{
+            color: $primary_color;
+            transition: .3s;
+            &:hover{
+                color: $primary_light;
+            }
+        }
+    }
+    .navigation-bar{
+        li{
+            a{
+                border-bottom: 2px solid transparent;
+                &:hover{
+                    color: $primary_color;
+                    border-bottom: 2px solid $primary_color;
+                }
+            }
+        }
+    }
+}

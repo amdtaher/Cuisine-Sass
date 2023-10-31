@@ -1,0 +1,38 @@
+.footer-area{
+    background-color: $bg_black;
+    .single-footer{
+        position: relative;
+        h4{
+            color: $primary_color;
+        }
+        p{
+            color: $white;
+        }
+        li a{
+            color: $white;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        input{
+            border-radius: 10px;
+            border: none;
+            padding: 6px 0 6px 6px;
+        }
+        input[type=button]{
+            background-color: $primary_color;
+            color: $white;
+            padding: 6px 16px;
+            border: none;
+            border-radius: 0 16px 0 0;
+            position: absolute;
+            bottom: 0;
+            right: 125px;
+            transition: .3s;
+            &:hover{
+                color: $white;
+                background-color: $black;
+            }
+        }
+    }
+}

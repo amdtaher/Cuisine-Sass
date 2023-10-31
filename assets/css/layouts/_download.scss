@@ -1,0 +1,11 @@
+.download-content{
+    p{
+        max-width: 44ch;
+    }
+    a{
+        &:hover img{
+            background-color: $grey;
+            z-index: -1;
+        }
+    }
+}

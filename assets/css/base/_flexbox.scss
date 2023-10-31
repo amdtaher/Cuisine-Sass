@@ -1,0 +1,27 @@
+$flexs: flex, inline-flex;
+@each $flex in $flexs {
+    .d-#{$flex} {
+        display: $flex;
+    }
+}
+
+$directions: row, row-reverse, column, column-reverse;
+@each $direction in $directions {
+    .d-#{$direction} {
+        flex-direction: $direction;
+    }
+}
+
+$justifys: flex-start, center, flex-end, space-between, space-evenly, space-around;
+@each $justify in $justifys {
+    .justify-#{$justify} {
+        justify-content: $justify;
+    }
+}
+
+$aligns: flex-start, center, flex-end, space-between, space-evenly, space-around;
+@each $align in $aligns {
+    .align-#{$align} {
+        align-items: $align;
+    }
+}

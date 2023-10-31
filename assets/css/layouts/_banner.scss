@@ -1,0 +1,100 @@
+@mixin image{
+    position: absolute;
+    width: 170px;
+}
+.banner-area{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 28%;
+        height: 100vh;
+        background-color: $bg_black;
+        z-index: -1;
+    }
+    .banner-images{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -70px;
+            width: 330px;
+            height: 600px;
+            transform: rotate(-10deg);
+            background-image: url(/assets/img/banner/half_elipse.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+        }
+        img{
+            border: 4px solid $primary_color;
+            border-radius: 50%;
+            &:nth-child(1){
+                animation: banner 10s linear infinite;
+                @keyframes banner {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+            &:nth-child(2){
+                @include image;
+                top: -180px;
+                left: 20px;
+                animation: banner_img1 5s ease-in-out infinite;
+                @keyframes banner_img1 {
+                    0%{
+                        opacity: 0.5;
+                    }
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0.5;
+                    }
+                }
+            }
+            &:nth-child(3){
+                @include image;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -150px;
+                animation: banner_img2 3s ease-in-out infinite;
+                @keyframes banner_img2 {
+                    0%{
+                        top: 50%;
+                    }
+                    50%{
+                        top: 55%;
+                    }
+                    100%{
+                        top: 50%;
+                    }
+                }
+            }
+            &:nth-child(4){
+                @include image;
+                bottom: -180px;
+                left: 20px;
+                animation: banner_img3 5s ease-in-out infinite;
+                @keyframes banner_img3 {
+                    0%{
+                        opacity: 0.5;
+                    }
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import 'colors';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'poppins',sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+    transition: .3s;
+    color: $link_color;
+}
+p{
+    color: $text_color2;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    transition: .3s;
+}
+ul{
+    list-style: none;
+}

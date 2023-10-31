@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+$sizes: (h1, 40px, 48px, 700), 
+        (h2, 32px, 40px, 600), 
+        (h3, 28px, 36px, 600),
+        (h4, 24px, 32px, 500),
+        (h5, 20px, 28px, 500),
+        (h6, 16px, 24px, 400);
+
+@each $name, $size, $height, $weight in $sizes {
+    #{$name} {
+        font-size: $size;
+        line-height: $height;
+        font-weight: $weight;
+    }
+}
+$aligns: left, center, right, justify;
+@each $align in $aligns {
+    .text-#{$align} {
+        text-align: $align;
+    }
+}
+$transforms: lowercase, uppercase, capitalize;
+@each $transform in $transforms {
+    .text-#{$transform} {
+        text-transform: $transform;
+    }
+}
+@for $i from 15 through 120{
+    .fz-#{$i}{
+        font-size: $i + px;
+    }
+}
+$weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+@each $weight in $weights {
+    .fw-#{$weight} {
+        font-weight: $weight;
+    }
+}
+@for $i from 15 through 120{
+    .lh-#{$i}{
+        line-height: $i + px;
+    }
+}
+@for $i from 1 through 6{
+    .gap-#{$i * 10}{
+        gap: $i * 10px;
+    }
+}
+
+
