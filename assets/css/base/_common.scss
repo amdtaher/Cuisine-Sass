@@ -25,3 +25,18 @@ img{
 ul{
     list-style: none;
 }
+
+// After Active Classes
+.activeLink{
+    color: $primary_color;
+    border-bottom: 2px solid $primary_color !important;
+}
+.about-link{
+    background-color: #fed7aa;
+    border-radius: 10px;
+    transition: .2s ease;
+}
+.about-span{
+    font-size: 20px;
+    font-weight: 600;
+}

@@ -25,3 +25,7 @@ $aligns: flex-start, center, flex-end, space-between, space-evenly, space-around
         align-items: $align;
     }
 }
+
+.wrap{
+    flex-wrap: wrap;
+}

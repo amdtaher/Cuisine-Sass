@@ -4,10 +4,50 @@
     .row{
         display: flex;
         margin: 0 -15px;
+        flex-wrap: wrap;
     }
 }
 
 $grid_breakpoint_xxl: 1400px;
+$grid_breakpoint_xl: 1200px;
+$grid_breakpoint_lg: 1000px;
+$grid_breakpoint_md: 800px;
+
+@media only screen and (min-width: $grid_breakpoint_md ){
+    .container{
+        width: 750px;
+    }
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            width: (100 / 12) * $i * 1%;
+            padding: 15px;
+        }
+    }
+}
+
+@media only screen and (min-width: $grid_breakpoint_lg ){
+    .container{
+        width: 970px;
+    }
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            width: (100 / 12) * $i * 1%;
+            padding: 15px;
+        }
+    }
+}
+
+@media only screen and (min-width: $grid_breakpoint_xl ){
+    .container{
+        width: 1170px;
+    }
+    @for $i from 1 through 12 {
+        .col-xl-#{$i} {
+            width: (100 / 12) * $i * 1%;
+            padding: 15px;
+        }
+    }
+}
 
 @media only screen and (min-width: $grid_breakpoint_xxl ) {
     .container{
