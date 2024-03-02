@@ -3204,11 +3204,9 @@ h6 {
 /* Layouts */
 /* Header */
 .header-area.fixed {
-  position: fixed;
+  position: sticky;
   z-index: 99999;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
 }
 .header-area .carts i {
   color: #ff5f1b;
